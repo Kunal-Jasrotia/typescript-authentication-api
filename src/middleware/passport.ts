@@ -32,9 +32,8 @@ export const auth = () => {
     },
         async function (req, email, password, done) {
             var result = await loginUser(email, password);
-            console.log(result);
-            if (result[0].length !== 0) {
-                userData = result[0][0]
+            if (result.status) {
+                userData = result
                 return done(null, userData);
             } else {
                 return done(null);

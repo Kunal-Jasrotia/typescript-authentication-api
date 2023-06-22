@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
+    "start": "npx nodemon src/index.ts",
     "prepare": "npm run build"
   },
   "name": "aftracker",
